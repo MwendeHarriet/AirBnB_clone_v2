@@ -2,9 +2,9 @@
 """This module creates and distributes an archive to your web servers
     using the function deploy"""
 
-import datetime
+from datetime import datetime
 from fabric.api import local, run, env, put
-from os.path import exists
+from os.path import exists, isdir  # Import isdir here
 env.hosts = ['54.237.85.149', '52.91.127.145']
 
 def do_pack():
